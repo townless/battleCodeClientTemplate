@@ -26,7 +26,10 @@ public class YourBot extends AbstractBot {
 
         log.info("Lors du dernier round le joueur 1 à voulu jouer {} et le coup {} a été appliqué", hitPlayed, hitApplied);
         log.info("Etat du joueur 1 : {}", lastRound.getActionPlayerOne().getTeamState());
-        return "HIDE";
+
+        String coupAJouer = "HIDE";
+
+        return coupAJouer;
     }
 
 
