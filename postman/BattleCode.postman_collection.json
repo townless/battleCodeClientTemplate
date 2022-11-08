@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "94169f51-b84f-4471-ad61-2222752ab03b",
+		"name": "BattleCode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "state",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authorizationPlayerOne}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/duel/{{idPartie}}/{{idPlayer}}/state",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"duel",
+						"{{idPartie}}",
+						"{{idPlayer}}",
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gameGetAllRounds",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/game/{{idPartie}}/allRounds",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"game",
+						"{{idPartie}}",
+						"allRounds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "play",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomHit = [\"SHOOT_UP\",\"RELOAD\",\"SHOOT_DOWN\",\"HIDE\"]\r",
+							"pm.environment.set(\"randomHit\",randomHit[_.random(randomHit.length-1)]);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/game/duel/{{idPartie}}/{{idPlayer}}/play/{{randomHit}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"game",
+						"duel",
+						"{{idPartie}}",
+						"{{idPlayer}}",
+						"play",
+						"{{randomHit}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartGame",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/trainning/new/1/{{idPlayer}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"trainning",
+						"new",
+						"1",
+						"{{idPlayer}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
