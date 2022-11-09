@@ -65,91 +65,32 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"name": "gameGetAllRounds",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{token}}",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{url}}/game/P5/lastRound",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"game",
-								"P5",
-								"lastRound"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Server",
-							"value": "nginx/1.23.1"
-						},
-						{
-							"key": "Date",
-							"value": "Mon, 07 Nov 2022 11:42:03 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Vary",
-							"value": "Origin"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Method"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Headers"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "X-XSS-Protection",
-							"value": "1; mode=block"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 ip-10-205-103-108 (squid)"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "MSIP-CRID",
-							"value": "okZFCEDZBha:5wYlCrK6oMv"
-						}
+			"response": []
+		},
+		{
+			"name": "gameGetLastRound",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/game/P5/lastRound",
+					"host": [
+						"{{url}}"
 					],
-					"cookie": [],
-					"body": "{\n    \"gameStatus\": \"CANCELED\",\n    \"gameId\": \"P5\",\n    \"playerOne\": {\n        \"hitPlayed\": \"SHOOT_DOWN\",\n        \"hitApplied\": \"SHOOT_DOWN\",\n        \"message\": \"Stop hiding : let's fight !\",\n        \"teamState\": {\n            \"teamId\": \"Bot1\",\n            \"number\": 1,\n            \"pointOfLife\": 1,\n            \"nbBullets\": 1,\n            \"shieldLife\": 4,\n            \"scorePointWon\": 3,\n            \"dead\": false\n        }\n    },\n    \"playerTwo\": {\n        \"hitPlayed\": \"SHOOT_UP\",\n        \"hitApplied\": \"FORBIDDEN\",\n        \"message\": \"Oops i forgot to reload\",\n        \"teamState\": {\n            \"teamId\": \"user123\",\n            \"number\": 2,\n            \"pointOfLife\": 1,\n            \"nbBullets\": 0,\n            \"shieldLife\": 2,\n            \"scorePointWon\": 3,\n            \"dead\": false\n        }\n    },\n    \"roundNumber\": 8\n}"
+					"path": [
+						"game",
+						"P5",
+						"lastRound"
+					]
 				}
-			]
+			},
+			"response": []
 		},
 		{
 			"name": "play",
