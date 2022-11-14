@@ -1,4 +1,4 @@
-package com.acensi.bot.http;
+package http;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

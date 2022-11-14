@@ -68,6 +68,42 @@
 			"response": []
 		},
 		{
+			"name": "nextGame",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/game/next/{{idPlayer}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"game",
+						"next",
+						"{{idPlayer}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "gameGetLastRound",
 			"request": {
 				"method": "GET",

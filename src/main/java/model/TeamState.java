@@ -1,7 +1,6 @@
-package com.acensi.bot.model;
+package model;
 
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
@@ -14,6 +13,8 @@ public class TeamState {
     private int nbBullets;
     private int shieldLife;
     private int scorePointWon;
+
+    private boolean dead;
 
     @Override
     public String toString() {

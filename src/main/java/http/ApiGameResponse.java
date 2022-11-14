@@ -1,10 +1,10 @@
-package com.acensi.bot.http;
+package http;
 
 
-import com.acensi.bot.model.Action;
-import com.acensi.bot.model.Round;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import model.Action;
+import model.Round;
 
 @Data
 public class ApiGameResponse {

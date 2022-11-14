@@ -11,25 +11,29 @@ Ce template expose deux endpoints afin de pouvoir :
 - jouer une partie existante (Play Game)
 - demarrer une partie d'entrainement (StartTrainning)
 
-Le postman est disponible à la racine du projet : battleCodeTemplate.postman_collection
+Le postman est disponible dans le dossier Postman
 
 
 ### Description des packages 
 
-- bot : contient toutes les classes permettant d'implémenter votre robot qui va jouer lors de la battleCode. YourBot.java contient la méthode permettant de déterminer la le coup qui sera joué 
-- controller : classe endpoints + exceptionHandlers
-- Http : Objets reponse http 
+- Http : Objets reponse http + ClientHttp
 - Model : objets java représentant une partie (Game, Round, Action, TeamState, ..)
-- Service / WebClientService : c'est le client web qui permet d'intéragir avec le serveur de jeu en effectuant des appels http
+
+- la logique de jeu est implémenté dans la classe Application.java 
+La méthode **jouer** reprendre le workflow de jeu
+La méthode  **definirCoup** est un exemple pour récupérer les coups / informations d'un round.
+
+Le boolean :  
+**boolean trainningMode = true;** permet de changer de mode de jeu. 
+Si celui ci est à vrai, il permet de démarrer une partie d'entrainnement. 
+Dans le cas ou le ce booléen est à false : le "bot" récupéra la partie la plus ancienne non terminée. 
+
 
 ### Configuration 
-Modifier les propriétés dans le fichier application properties (dossier ressources) avec vos infos de connexion. 
+Modifier les propriétés dans le fichier application.Java avant de démarrer votre partie
 
-battlecode.game.server.url=
-
-your.api.key=
-
-your.api.id=
+    #public static final String ID_PLAYER = "";
+    #public static final String TOKEN = "";
 
 
 ### Demarrage projet 
@@ -38,6 +42,7 @@ your.api.id=
 
 Effectuer un mvn clean install 
 
-Effectuer un clic droit sur la classe principale "BattleCodeTemplateApp" afin de démarrer le WS
+Effectuer un clic droit sur la classe principale "Application" afin de démarrer le programme java 
+
 
 

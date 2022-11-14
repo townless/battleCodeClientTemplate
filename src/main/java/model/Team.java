@@ -1,4 +1,4 @@
-package com.acensi.bot.model;
+package model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

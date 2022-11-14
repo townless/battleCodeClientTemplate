@@ -1,4 +1,4 @@
-package com.acensi.bot.utils;
+package utils;
 
 public enum HitEnum {
 

@@ -1,8 +1,9 @@
-package com.acensi.bot.model;
+package model;
 
-import com.acensi.bot.utils.HitEnum;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import utils.HitEnum;
 
 import java.io.Serial;
 import java.io.Serializable;

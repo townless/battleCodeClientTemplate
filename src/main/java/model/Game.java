@@ -1,10 +1,12 @@
-package com.acensi.bot.model;
+package model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.Comparator;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -21,5 +23,8 @@ public class Game {
 
     List<Round> roundList;
     String state;
+
+    @JsonFormat(pattern="dd-MM-yyyy HH:mm:ss")
+    Date creationDateTime;
 
 }

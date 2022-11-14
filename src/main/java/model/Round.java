@@ -1,6 +1,5 @@
-package com.acensi.bot.model;
+package model;
 
-import com.acensi.bot.utils.HitEnum;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +20,8 @@ public class Round implements Serializable {
     private Long idRound;
     private int number;
 
+    private boolean over;
+    private boolean lastRound;
 
 
 
