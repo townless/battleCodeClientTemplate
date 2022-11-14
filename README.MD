@@ -1,6 +1,6 @@
 ## BATTLE CODE TEMPLATE
 
-Ce template est un client spring boot permettant d'intéragir avec le serveur de jeu. 
+Ce template est un client java permettant d'intéragir avec le serveur de jeu. 
 Aucune logique de jeu est implémenté
 
 
