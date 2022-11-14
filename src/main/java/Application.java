@@ -60,7 +60,7 @@ public class Application {
                 String coupAJouer = definirCoup(game);
 
                 String play = customHttpClient.jouerCoup(gameId,  coupAJouer);
-                log.info("Coup joue" + play);
+                log.info("Coup joue " + play);
             } else {
                 log.info("ETAT PARTIE: " + status);
                 log.info("Fin de la partie");

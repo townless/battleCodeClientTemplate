@@ -54,14 +54,14 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/game/P5/lastRound",
+					"raw": "{{url}}/game/{{idPartie}}/allRounds",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"game",
-						"P5",
-						"lastRound"
+						"{{idPartie}}",
+						"allRounds"
 					]
 				}
 			},
@@ -115,13 +115,13 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/game/P5/lastRound",
+					"raw": "{{url}}/game/{{idPartie}}/lastRound",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"game",
-						"P5",
+						"{{idPartie}}",
 						"lastRound"
 					]
 				}

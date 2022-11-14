@@ -147,7 +147,7 @@ public class CustomHttpClient {
         String idPartie = null;
 
         URI uri = URI.create(urlApi + "/game/next/" + idPlayer);
-        HttpRequest httpRequest = HttpRequest.newBuilder().uri(uri).POST(HttpRequest.BodyPublishers.noBody()).header("Authorization", token ).build();
+        HttpRequest httpRequest = HttpRequest.newBuilder().uri(uri).GET().header("Authorization", token ).build();
 
 
         HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
